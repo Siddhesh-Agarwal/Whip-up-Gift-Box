@@ -14,25 +14,31 @@ body {
 .container {
     background-color: #f4a10c;
     width: 100vw;
-    top: 0;
-    left: 0;
-    position: absolute;
     display: flex;
     justify-content: space-around;
     padding: 2em;
+    margin-bottom: 1em;
     font-size: large;
     border-bottom: 12px double rgba(192, 0, 0, 0.5);
 }
 
+.container>.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
 
-.container > .group > input {
+.container>.group>input {
     /* height: 2em; */
     border-radius: 0.5em;
     padding: 0.5em;
     margin-left: 2em;
 }
 
-.container > button {
+.container>button {
     border-radius: 0.5em;
     padding: 0.5em 2.5em;
     background-color: rgba(192, 0, 0, 0.7);
@@ -42,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-.container > button:hover {
+.container>button:hover {
     background-color: rgba(192, 0, 0, 1);
     box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -55,29 +61,41 @@ body {
     align-items: center;
 }
 
-#grid > img {
+#grid>img {
     width: 10em;
     height: auto;
-    margin: 1.5em;
     padding: 0.5em;
     background-color: #f4a10c;
     border: 6px solid rgba(192, 0, 0, 0.5);
     border-radius: 2em;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px) {
     #grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    #grid > img {
+    #grid>img {
         width: 8em;
-        margin: 1em;
-        padding: 0.5em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container>.group {
+
+        width: 100%;
+        margin-bottom: 0.75em;
+    }
+
+    .container>.group>input {
+        width: 100%;
+        margin: 0.5em 0;
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 641px) {
     #grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
