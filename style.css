@@ -13,10 +13,13 @@ body {
 
 .container {
     background-color: #f4a10c;
-    width: 100%;
-    padding: 2em;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
     display: flex;
     justify-content: space-around;
+    padding: 2em;
     font-size: large;
     border-bottom: 12px double rgba(192, 0, 0, 0.5);
 }
@@ -62,9 +65,15 @@ body {
     border-radius: 2em;
 }
 
-@media screen and (min-width: 320px){
+@media screen and (max-width: 600px){
     #grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #grid > img {
+        width: 8em;
+        margin: 1em;
+        padding: 0.5em;
     }
 }
 
