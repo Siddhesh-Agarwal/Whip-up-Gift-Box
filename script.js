@@ -9,6 +9,7 @@ function gift() {
         let img = document.createElement("img");
         img.src = "https://cdn.pixabay.com/photo/2016/05/26/17/09/present-1417611_960_720.png";
         img.alt = "gift";
+        img.loading = "lazy";
         grid.appendChild(img);
     }
 }
